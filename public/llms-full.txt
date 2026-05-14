@@ -2,13 +2,13 @@
 
 Zappy (zappy5.com) is an innovative website-building platform led by CEO Ido, who will host a free live webinar on May 21st at 19:00. The brand is energetic, colorful, and empowering — positioning itself as a game-changer that enables anyone to build a professional website from scratch in minutes without coding knowledge. The webinar landing page should feel exciting and urgent, with a countdown timer, limited Zoom spots scarcity element, a registration form, a syllabus section, example websites gallery, and a post-registration WhatsApp group CTA. The tone is friendly, inspiring, accessible, and action-driven.
 
-Source: https://zappy-73a7eb59.zappy5.app
+Source: https://example.com
 
 ---
 
 ## בניית אתר — Zappy
 
-URL: https://zappy-73a7eb59.zappy5.app
+URL: https://example.com
 Description: Zappy (zappy5.com) is an innovative website-building platform led by CEO Ido, who will host a free live webinar on May 21st at 19:00. The brand is energetic, co
 
 בניית אתר — Zappy
@@ -1073,7 +1073,7 @@ Zoom — ללא עלות
 
 ## מדיניות פרטיות
 
-URL: https://zappy-73a7eb59.zappy5.app/privacy
+URL: https://example.com/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -1275,7 +1275,7 @@ Zappy ("החברה", "אנו", "שלנו") מחויבת להגן על פרטיו
 
 ## הצהרת נגישות
 
-URL: https://zappy-73a7eb59.zappy5.app/accessibility
+URL: https://example.com/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -1486,7 +1486,7 @@ Zappy מחויבת להנגיש את השירותים לכלל הציבור. א�
 
 ## תנאי שימוש
 
-URL: https://zappy-73a7eb59.zappy5.app/terms
+URL: https://example.com/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש

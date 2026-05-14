@@ -1,0 +1,69 @@
+# Zappy — Generative Engine Optimization Map
+
+> Zappy (zappy5.com) is an innovative website-building platform led by CEO Ido, who will host a free live webinar on May 21st at 19:00. The brand is energetic, colorful, and empowering — positioning itself as a game-changer that enables anyone to build a professional website from scratch in minutes without coding knowledge. The webinar landing page should feel exciting and urgent, with a countdown timer, limited Zoom spots scarcity element, a registration form, a syllabus section, example websites gallery, and a post-registration WhatsApp group CTA. The tone is friendly, inspiring, accessible, and action-driven.
+
+---
+
+## Pages
+
+### בית
+https://zappy-73a7eb59.zappy5.app
+Zappy (zappy5.com) is an innovative website-building platform led by CEO Ido, who will host a free live webinar on May 21st at 19:00. The brand is energetic, co
+
+## Legal & Policy
+
+### Privacy Policy
+https://zappy-73a7eb59.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://zappy-73a7eb59.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://zappy-73a7eb59.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://zappy-73a7eb59.zappy5.app
+- Endpoint: https://zappy-73a7eb59.zappy5.app/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel, required)
+  - `privacy_consent` (checkbox, required)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Zappy
+Zappy (zappy5.com) is an innovative website-building platform led by CEO Ido, who will host a free live webinar on May 21st at 19:00. The brand is energetic, colorful, and empowering — positioning itself as a game-changer that enables anyone to build a professional website from scratch in minutes without coding knowledge. The webinar landing page should feel exciting and urgent, with a countdown timer, limited Zoom spots scarcity element, a registration form, a syllabus section, example websites gallery, and a post-registration WhatsApp group CTA. The tone is friendly, inspiring, accessible, and action-driven.
+
+## Target Audience
+- בעלי עסקים, יזמים, מעצבים, סוכנויות, בוני אתרים וכל מי שרוצה להקים נוכחות דיגיטלית
+- מפתחי אתרים פרילנסרים
+- יזמים בחברות סטארטאפ
+- בעלי סוכנויות דיגיטליות
+- בעלי עסק קטן
+- סוכנויות דיגיטל
+- בוני אתרים
+
+## Industry
+Web Development Platform / SaaS
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://zappy-73a7eb59.zappy5.app/sitemap.xml
+- Robots: https://zappy-73a7eb59.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://zappy-73a7eb59.zappy5.app/llms-full.txt

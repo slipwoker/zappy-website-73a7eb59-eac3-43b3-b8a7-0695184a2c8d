@@ -2483,9 +2483,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   padding: 120px 24px 40px;
 }
 
-/* Content group — aligned to start (right in RTL) */
 .index-hero-section .hero-content-group {
-  max-width: 620px;
+  max-width: 100%;
   margin-inline-start: 0;
   display: flex;
   flex-direction: column;

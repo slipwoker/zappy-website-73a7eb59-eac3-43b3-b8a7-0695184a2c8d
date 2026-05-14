@@ -1432,6 +1432,36 @@ window.onload = function() {
 })();
 
 
+/* Added Component Script */
+(function () {
+  'use strict';
+
+  // Intersection Observer for scroll animations
+  const steps = document.querySelectorAll('.funnel-step');
+
+  if (!steps.length) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('funnel-step--visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  steps.forEach(function (step) {
+    observer.observe(step);
+  });
+})();
+
+
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
   try {

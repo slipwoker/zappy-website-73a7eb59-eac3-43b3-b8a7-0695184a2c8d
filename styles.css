@@ -2489,6 +2489,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 /* Badge */

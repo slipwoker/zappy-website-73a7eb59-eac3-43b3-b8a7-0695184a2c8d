@@ -2473,12 +2473,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   z-index: 2;
 }
 
-/* Container */
 .index-hero-section .hero-container {
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 120px 24px 40px;
 }

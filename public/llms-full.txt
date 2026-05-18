@@ -282,8 +282,8 @@ Q&A חי
 
 ### צור קשר
 - info@zappy5.com
-- [business_phone]
-- [business_address]
+- 0559609000
+- Hashlosha 3, Nitzanei Oz, Israel
 
 ### שעות פעילות
 - ראשון – חמישי09:00 – 18:00
@@ -435,9 +435,9 @@ Zappy ("החברה", "אנו", "שלנו") מחויבת להגן על פרטיו
 
 - אימייל: info@zappy5.com
 
-- טלפון: [business_phone]
+- טלפון: 0559609000
 
-- כתובת: [business_address]
+- כתובת: Hashlosha 3, Nitzanei Oz, Israel
 
 
 
@@ -462,8 +462,8 @@ Zappy ("החברה", "אנו", "שלנו") מחויבת להגן על פרטיו
 
 ### צור קשר
 - info@zappy5.com
-- [business_phone]
-- [business_address]
+- 0559609000
+- Hashlosha 3, Nitzanei Oz, Israel
 
 ### שעות פעילות
 - ראשון – חמישי09:00 – 18:00
@@ -623,7 +623,7 @@ Zappy מחויבת להנגיש את השירותים לכלל הציבור. א�
 
 - אימייל: info@zappy5.com
 
-- טלפון: [business_phone]
+- טלפון: 0559609000
 
 
 
@@ -651,8 +651,8 @@ Zappy מחויבת להנגיש את השירותים לכלל הציבור. א�
 
 ### צור קשר
 - info@zappy5.com
-- [business_phone]
-- [business_address]
+- 0559609000
+- Hashlosha 3, Nitzanei Oz, Israel
 
 ### שעות פעילות
 - ראשון – חמישי09:00 – 18:00
@@ -835,9 +835,9 @@ Zappy מספקת Web Development Platform / SaaS דרך האתר. השירותי
 
 - אימייל: info@zappy5.com
 
-- טלפון: [business_phone]
+- טלפון: 0559609000
 
-- כתובת: [business_address]
+- כתובת: Hashlosha 3, Nitzanei Oz, Israel
 
 
 
@@ -859,8 +859,8 @@ Zappy מספקת Web Development Platform / SaaS דרך האתר. השירותי
 
 ### צור קשר
 - info@zappy5.com
-- [business_phone]
-- [business_address]
+- 0559609000
+- Hashlosha 3, Nitzanei Oz, Israel
 
 ### שעות פעילות
 - ראשון – חמישי09:00 – 18:00

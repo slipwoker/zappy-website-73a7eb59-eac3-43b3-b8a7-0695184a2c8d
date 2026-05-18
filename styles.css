@@ -7390,6 +7390,32 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   text-align: center !important;
 }
 }
+
+@media (max-width: 767px) {
+#audience .ias-tiles-col {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#audience #zappy-auto-grid-1778765219771-lxay51 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#audience .ias-tile {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+#audience .ias-tile-icon {
+  margin-inline: auto !important;
+}
+
+#audience .ias-tile-content {
+  text-align: center !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

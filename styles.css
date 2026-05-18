@@ -7362,6 +7362,34 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   padding-right: 12px !important;
 }
 }
+
+@media (max-width: 767px) {
+.index-audience-section .ias-tile {
+  grid-template-columns: 1fr !important;
+  text-align: center !important;
+}
+
+.index-audience-section .ias-tile-content {
+  text-align: center !important;
+}
+}
+
+@media (max-width: 767px) {
+.index-audience-section .ias-tile {
+  grid-template-columns: 1fr !important;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.index-audience-section .ias-tile .ias-tile-icon {
+  margin-inline-start: auto !important;
+  margin-inline-end: auto !important;
+}
+
+.index-audience-section .ias-tile-content {
+  text-align: center !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

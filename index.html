@@ -883,26 +883,54 @@ RealGround
 
 <script>
 (function(){
-  var slides = document.querySelectorAll('#gal2Track .gal2-slide');
-  var dots   = document.querySelectorAll('#gal2Dots .gal2-dot');
+  var track  = document.getElementById('gal2Track');
+  var dotsEl = document.getElementById('gal2Dots');
   var counter = document.getElementById('gal2Current');
+  if (!track || !dotsEl) return;
+
+  var slides = track.querySelectorAll('.gal2-slide');
+  var dots   = dotsEl.querySelectorAll('.gal2-dot');
   var total  = slides.length;
+
+  // Sync current index with whatever slide is already active in HTML
   var current = 0;
+  for (var i = 0; i < slides.length; i++) {
+    if (slides[i].classList.contains('gal2-slide-active')) { current = i; break; }
+  }
 
   function goTo(idx) {
+    // Remove active from current
     slides[current].classList.remove('gal2-slide-active');
-    dots[current].classList.remove('gal2-dot-active');
+    if (dots[current]) dots[current].classList.remove('gal2-dot-active');
+    // Move to new index
     current = (idx + total) % total;
+    // Show only the new slide (ensure no others are active)
+    for (var j = 0; j < slides.length; j++) {
+      slides[j].classList.remove('gal2-slide-active');
+      if (dots[j]) dots[j].classList.remove('gal2-dot-active');
+    }
     slides[current].classList.add('gal2-slide-active');
-    dots[current].classList.add('gal2-dot-active');
+    if (dots[current]) dots[current].classList.add('gal2-dot-active');
     if (counter) counter.textContent = current + 1;
   }
 
-  document.getElementById('gal2Prev').addEventListener('click', function(){ goTo(current - 1); });
-  document.getElementById('gal2Next').addEventListener('click', function(){ goTo(current + 1); });
+  // Use cloned buttons to avoid duplicate listeners on re-render
+  var prevBtn = document.getElementById('gal2Prev');
+  var nextBtn = document.getElementById('gal2Next');
 
-  dots.forEach(function(dot){
-    dot.addEventListener('click', function(){ goTo(parseInt(this.getAttribute('data-index'))); });
+  if (prevBtn) {
+    var newPrev = prevBtn.cloneNode(true);
+    prevBtn.parentNode.replaceChild(newPrev, prevBtn);
+    newPrev.addEventListener('click', function(e){ e.stopPropagation(); goTo(current - 1); });
+  }
+  if (nextBtn) {
+    var newNext = nextBtn.cloneNode(true);
+    nextBtn.parentNode.replaceChild(newNext, nextBtn);
+    newNext.addEventListener('click', function(e){ e.stopPropagation(); goTo(current + 1); });
+  }
+
+  dots.forEach(function(dot, i){
+    dot.addEventListener('click', function(){ goTo(parseInt(this.getAttribute('data-index')) || i); });
   });
 })();
 </script>

@@ -8027,6 +8027,16 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   display: grid !important;
   animation: gal2FadeIn 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.index-cta-section .index-cta-whatsapp-preview .index-cta-submit-btn {
+  background: #25D366 !important;
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4) !important;
+}
+
+.index-cta-section .index-cta-whatsapp-preview .index-cta-submit-btn:hover {
+  background: #1ebe5d !important;
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.55) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

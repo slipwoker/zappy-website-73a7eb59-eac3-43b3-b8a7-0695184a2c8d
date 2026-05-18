@@ -8010,6 +8010,14 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   display: grid !important;
   animation: gal2FadeIn 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.index-gallery-section .gal2-slide:not(.gal2-slide-active) {
+  display: none !important;
+}
+
+.index-gallery-section .gal2-slide.gal2-slide-active {
+  display: grid !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

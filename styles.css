@@ -3551,20 +3551,21 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   direction: rtl;
 }
 
-/* --- Individual tile --- */
 .index-audience-section .ias-tile {
   display: grid;
   grid-template-columns: 48px 1fr;
   align-items: center;
   gap: 14px;
   padding: 20px 16px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(123, 47, 247, 0.15);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 16px;
   backdrop-filter: blur(12px);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
   direction: rtl;
+  border-color: rgba(123, 47, 247, 0.4);
+  box-shadow: rgba(123, 47, 247, 0.2) 0px 0px 24px;
 }
 .index-audience-section .ias-tile:hover {
   background: rgba(255,255,255,0.1);
@@ -3578,9 +3579,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   box-shadow: 0 0 24px rgba(123,47,247,0.2);
 }
 .index-audience-section .ias-tile--glow-orange {
-  background: rgba(255,138,61,0.12);
-  border-color: rgba(255,138,61,0.35);
-  box-shadow: 0 0 24px rgba(255,138,61,0.15);
+  background: rgba(123, 47, 247, 0.15);
+  border-color: rgba(123, 47, 247, 0.4);
+  box-shadow: rgba(123, 47, 247, 0.2) 0px 0px 24px;
 }
 
 /* --- Tile icon wrapper --- */
@@ -3597,9 +3598,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   flex-shrink: 0;
 }
 .index-audience-section .ias-tile--glow-orange .ias-tile-icon {
-  background: linear-gradient(135deg, rgba(255,138,61,0.3), rgba(255,107,53,0.2));
-  border-color: rgba(255,138,61,0.3);
-  color: #FDBA74;
+  background: linear-gradient(135deg, rgba(123, 47, 247, 0.3), rgba(47, 128, 255, 0.2));
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgb(196, 181, 253);
 }
 
 /* --- Tile content --- */

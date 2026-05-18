@@ -1461,6 +1461,144 @@ window.onload = function() {
   });
 })();
 
+/* Added Component Script */
+(function () {
+  const track = document.getElementById('zgalTrack');
+  const prevBtn = document.getElementById('zgalPrev');
+  const nextBtn = document.getElementById('zgalNext');
+  const dotsContainer = document.getElementById('zgalDots');
+
+  if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+  const slides = track.querySelectorAll('.zgal-slide');
+  let currentIndex = 0;
+  let autoplayTimer = null;
+
+  /* ── How many slides visible at once ── */
+  function getSlidesVisible() {
+    const w = window.innerWidth;
+    if (w <= 600) return 1;
+    if (w <= 900) return 2;
+    return 3;
+  }
+
+  function getTotalPages() {
+    return Math.ceil(slides.length / getSlidesVisible());
+  }
+
+  /* ── Build dots ── */
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const pages = getTotalPages();
+    for (let i = 0; i < pages; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'zgal-dot' + (i === 0 ? ' active' : '');
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-label', 'שקופית ' + (i + 1));
+      btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      btn.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(btn);
+    }
+  }
+
+  /* ── Update dots ── */
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll('.zgal-dot');
+    dots.forEach((d, i) => {
+      const active = i === currentIndex;
+      d.classList.toggle('active', active);
+      d.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  /* ── Move track ── */
+  function goTo(pageIndex) {
+    const pages = getTotalPages();
+    currentIndex = Math.max(0, Math.min(pageIndex, pages - 1));
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const gap = 24;
+    const visible = getSlidesVisible();
+    const offset = currentIndex * (slideWidth + gap) * visible;
+
+    track.style.transform = 'translateX(' + offset + 'px)';
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= pages - 1;
+
+    updateDots();
+  }
+
+  function next() {
+    const pages = getTotalPages();
+    goTo(currentIndex < pages - 1 ? currentIndex + 1 : 0);
+  }
+
+  function prev() {
+    const pages = getTotalPages();
+    goTo(currentIndex > 0 ? currentIndex - 1 : pages - 1);
+  }
+
+  /* ── Autoplay ── */
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(next, 4500);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+  }
+
+  /* ── Touch / swipe ── */
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoplay();
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      // RTL: swipe left → next (visually previous in RTL)
+      diff > 0 ? next() : prev();
+    }
+    startAutoplay();
+  }, { passive: true });
+
+  /* ── Pause on hover ── */
+  track.closest('.zgal-carousel-wrapper').addEventListener('mouseenter', stopAutoplay);
+  track.closest('.zgal-carousel-wrapper').addEventListener('mouseleave', startAutoplay);
+
+  /* ── Button listeners ── */
+  prevBtn.addEventListener('click', () => { prev(); stopAutoplay(); startAutoplay(); });
+  nextBtn.addEventListener('click', () => { next(); stopAutoplay(); startAutoplay(); });
+
+  /* ── Keyboard ── */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { next(); stopAutoplay(); startAutoplay(); }
+    if (e.key === 'ArrowRight') { prev(); stopAutoplay(); startAutoplay(); }
+  });
+
+  /* ── Resize ── */
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      buildDots();
+      currentIndex = 0;
+      goTo(0);
+    }, 200);
+  });
+
+  /* ── Init ── */
+  buildDots();
+  goTo(0);
+  startAutoplay();
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

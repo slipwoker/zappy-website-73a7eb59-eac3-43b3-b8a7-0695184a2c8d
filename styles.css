@@ -7338,6 +7338,16 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   content: ' *';
   color: #FF6B35;
 }
+
+#index-hero-section .hero-form-label::after {
+  content: ' *';
+  color: #FF6B35;
+}
+
+#index-hero-section .privacy-consent-label::after {
+  content: ' *';
+  color: #FF6B35;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
